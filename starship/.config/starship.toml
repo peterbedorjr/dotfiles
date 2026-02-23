@@ -1,0 +1,91 @@
+# Cyberpunk Neon — matches Ghostty theme palette
+# Colors: magenta=#f94dff cyan=#04d1f9 green=#37f499 purple=#987afb red=#f16c75 yellow=#9ad900
+
+format = """
+[](#987afb)$os$username[](bg:#04d1f9 fg:#987afb)$directory[](fg:#04d1f9 bg:#37f499)$git_branch$git_status[](fg:#37f499 bg:#9ad900)$nodejs$rust$golang$python$php[](fg:#9ad900 bg:#f94dff)$docker_context[](fg:#f94dff) $cmd_duration$character"""
+
+palette = "cyberpunk"
+
+[palettes.cyberpunk]
+neon_purple = "#987afb"
+neon_cyan = "#04d1f9"
+neon_green = "#37f499"
+neon_lime = "#9ad900"
+neon_magenta = "#f94dff"
+neon_red = "#f16c75"
+neon_pink = "#fca6ff"
+dark_bg = "#0D1116"
+
+[os]
+disabled = false
+style = "bg:#987afb fg:#0D1116"
+
+[os.symbols]
+Macos = " "
+
+[username]
+show_always = false
+style_user = "bg:#987afb fg:#0D1116"
+format = "[$user ]($style)"
+
+[directory]
+style = "bg:#04d1f9 fg:#0D1116"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"code" = " "
+"dotfiles" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#37f499 fg:#0D1116"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#37f499 fg:#0D1116"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#9ad900 fg:#0D1116"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = "🦀"
+style = "bg:#9ad900 fg:#0D1116"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#9ad900 fg:#0D1116"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = ""
+style = "bg:#9ad900 fg:#0D1116"
+format = "[ $symbol ($version) ]($style)"
+
+[php]
+symbol = ""
+style = "bg:#9ad900 fg:#0D1116"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:#f94dff fg:#0D1116"
+format = "[ $symbol $context ]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "fg:#fca6ff"
+format = "[ $duration]($style) "
+
+[character]
+success_symbol = "[❯](bold fg:#37f499)"
+error_symbol = "[❯](bold fg:#f16c75)"

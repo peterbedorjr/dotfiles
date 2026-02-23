@@ -1,0 +1,33 @@
+gui:
+  nerdFontsVersion: "3"
+  showIcons: true
+  border: rounded
+  theme:
+    activeBorderColor:
+      - "#04d1f9"  # neon cyan
+      - bold
+    inactiveBorderColor:
+      - "#987afb"  # neon purple
+    searchingActiveBorderColor:
+      - "#37f499"  # neon green
+      - bold
+    optionsTextColor:
+      - "#04d1f9"
+    selectedLineBgColor:
+      - "#1a1e2e"
+    cherryPickedCommitFgColor:
+      - "#04d1f9"
+    cherryPickedCommitBgColor:
+      - "#987afb"
+    markedBaseCommitFgColor:
+      - "#04d1f9"
+    markedBaseCommitBgColor:
+      - "#987afb"
+    unstagedChangesColor:
+      - "#f16c75"  # neon red
+    defaultFgColor:
+      - "#ffffff"
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
