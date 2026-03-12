@@ -5,8 +5,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$(pyenv root)/shims:$PATH"
-export PATH="/Users/peterbedorjr/.codeium/windsurf/bin:$PATH"
-export PATH="/Users/peterbedorjr/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # ── Editor ────────────────────────────────────────────────
 export EDITOR="nvim"

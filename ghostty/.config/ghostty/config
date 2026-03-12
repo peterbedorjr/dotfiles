@@ -13,15 +13,15 @@ font-feature = +liga
 font-feature = +calt
 
 # === WINDOW ===
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 window-padding-x = 14
 window-padding-y = 10
 window-padding-balance = true
 window-colorspace = display-p3
 
 # === TRANSPARENCY + BLUR ===
-background-opacity = 0.88
-background-blur-radius = 20
+# background-opacity = 0.88
+# background-blur-radius = 20
 
 # === CURSOR ===
 cursor-style = block
@@ -38,19 +38,29 @@ unfocused-split-opacity = 0.7
 
 # === SHADERS ===
 # CRT scanline effect — the retro backbone
-custom-shader = ./shaders/_0xhckr/in-game-crt.glsl
+# custom-shader = ./shaders/_0xhckr/in-game-crt.glsl
 
 # Bloom glow — makes neon colors pop through the CRT
-custom-shader = ./shaders/bloom050.glsl
+# custom-shader = ./shaders/bloom050.glsl
 
 # Cursor trail — neovide-style warp effect
-custom-shader = ./shaders/_cursor_shaders/cursor_warp.glsl
+# custom-shader = ./shaders/_cursor_shaders/cursor_warp.glsl
 
 # Animation keeps shaders running (needed for cursor trails)
 custom-shader-animation = always
 
+# === INPUT ===
+macos-option-as-alt = true
+
 # === KEYBINDS ===
 keybind = shift+enter=text:\x1b\r
+
+# Cmd+Left/Right — jump to start/end of line (sends Ctrl+A / Ctrl+E)
+keybind = super+left=text:\x01
+keybind = super+right=text:\x05
+
+# Cmd+Backspace — delete to start of line (sends Ctrl+U)
+keybind = super+backspace=text:\x15
 
 # ──────────────────────────────────────────────────────────────
 # SHADER MENU — uncomment to swap styles
@@ -63,13 +73,13 @@ keybind = shift+enter=text:\x1b\r
 #   custom-shader = ./shaders/_0xhckr/tft.glsl
 #
 # Bloom levels (pick one):
-#   custom-shader = ./shaders/bloom025.glsl
+   custom-shader = ./shaders/bloom025.glsl
 #   custom-shader = ./shaders/bloom050.glsl
 #   custom-shader = ./shaders/bloom075.glsl
 #   custom-shader = ./shaders/bloom1.glsl
 #
 # Cursor effects (pick one):
-#   custom-shader = ./shaders/_cursor_shaders/cursor_warp.glsl
+   custom-shader = ./shaders/_cursor_shaders/cursor_warp.glsl
 #   custom-shader = ./shaders/_cursor_shaders/cursor_tail.glsl
 #   custom-shader = ./shaders/_cursor_shaders/cursor_sweep.glsl
 #   custom-shader = ./shaders/_cursor_shaders/sonic_boom_cursor.glsl

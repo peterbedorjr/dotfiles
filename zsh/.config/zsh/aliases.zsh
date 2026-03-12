@@ -25,6 +25,7 @@ fi
 
 # ── Git ───────────────────────────────────────────────────
 alias lg="lazygit"
+alias ld="lazydocker"
 alias glog="git log --oneline --graph --decorate -20"
 
 # ── Editors ───────────────────────────────────────────────

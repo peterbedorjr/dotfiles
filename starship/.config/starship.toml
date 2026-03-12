@@ -1,8 +1,11 @@
-# Cyberpunk Neon — matches Ghostty theme palette
-# Colors: magenta=#f94dff cyan=#04d1f9 green=#37f499 purple=#987afb red=#f16c75 yellow=#9ad900
+# Cyberpunk Neon — minimal style
+# No background blocks. Neon text on transparent bg. Lets CRT/bloom breathe.
 
 format = """
-[](#987afb)$os$username[](bg:#04d1f9 fg:#987afb)$directory[](fg:#04d1f9 bg:#37f499)$git_branch$git_status[](fg:#37f499 bg:#9ad900)$nodejs$rust$golang$python$php[](fg:#9ad900 bg:#f94dff)$docker_context[](fg:#f94dff) $cmd_duration$character"""
+$directory$git_branch$git_status$fill$nodejs$rust$golang$python$php$docker_context$cmd_duration
+$character"""
+
+right_format = ""
 
 palette = "cyberpunk"
 
@@ -16,21 +19,10 @@ neon_red = "#f16c75"
 neon_pink = "#fca6ff"
 dark_bg = "#0D1116"
 
-[os]
-disabled = false
-style = "bg:#987afb fg:#0D1116"
-
-[os.symbols]
-Macos = " "
-
-[username]
-show_always = false
-style_user = "bg:#987afb fg:#0D1116"
-format = "[$user ]($style)"
-
+# ── Directory ────────────────────────────────────────────
 [directory]
-style = "bg:#04d1f9 fg:#0D1116"
-format = "[ $path ]($style)"
+style = "bold fg:neon_cyan"
+format = "[$path]($style) "
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -42,50 +34,68 @@ truncation_symbol = "…/"
 "code" = " "
 "dotfiles" = " "
 
+# ── Git ──────────────────────────────────────────────────
 [git_branch]
 symbol = ""
-style = "bg:#37f499 fg:#0D1116"
-format = "[ $symbol $branch ]($style)"
+style = "fg:neon_green"
+format = "[$symbol $branch]($style) "
 
 [git_status]
-style = "bg:#37f499 fg:#0D1116"
-format = "[$all_status$ahead_behind ]($style)"
+style = "fg:neon_green"
+format = "[$all_status$ahead_behind]($style)"
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+modified = "[~${count}](fg:neon_lime) "
+staged = "[+${count}](fg:neon_green) "
+untracked = "[?${count}](fg:neon_purple) "
+deleted = "[-${count}](fg:neon_red) "
+conflicted = "[!${count}](bold fg:neon_red) "
+stashed = "[*${count}](fg:neon_pink) "
 
+# ── Fill (pushes right-side info to the edge) ───────────
+[fill]
+symbol = " "
+
+# ── Languages (dim, right-aligned) ──────────────────────
 [nodejs]
 symbol = ""
-style = "bg:#9ad900 fg:#0D1116"
-format = "[ $symbol ($version) ]($style)"
+style = "fg:neon_lime"
+format = "[$symbol $version]($style) "
 
 [rust]
-symbol = "🦀"
-style = "bg:#9ad900 fg:#0D1116"
-format = "[ $symbol ($version) ]($style)"
+symbol = ""
+style = "fg:neon_red"
+format = "[$symbol $version]($style) "
 
 [golang]
 symbol = ""
-style = "bg:#9ad900 fg:#0D1116"
-format = "[ $symbol ($version) ]($style)"
+style = "fg:neon_cyan"
+format = "[$symbol $version]($style) "
 
 [python]
 symbol = ""
-style = "bg:#9ad900 fg:#0D1116"
-format = "[ $symbol ($version) ]($style)"
+style = "fg:neon_purple"
+format = "[$symbol $version]($style) "
 
 [php]
 symbol = ""
-style = "bg:#9ad900 fg:#0D1116"
-format = "[ $symbol ($version) ]($style)"
+style = "fg:neon_pink"
+format = "[$symbol $version]($style) "
 
+# ── Docker ───────────────────────────────────────────────
 [docker_context]
 symbol = ""
-style = "bg:#f94dff fg:#0D1116"
-format = "[ $symbol $context ]($style)"
+style = "fg:neon_magenta"
+format = "[$symbol $context]($style) "
 
+# ── Command Duration ─────────────────────────────────────
 [cmd_duration]
 min_time = 2000
-style = "fg:#fca6ff"
-format = "[ $duration]($style) "
+style = "dimmed fg:neon_pink"
+format = "[$duration]($style) "
 
+# ── Prompt Character ─────────────────────────────────────
 [character]
-success_symbol = "[❯](bold fg:#37f499)"
-error_symbol = "[❯](bold fg:#f16c75)"
+success_symbol = "[❯](bold fg:neon_green)"
+error_symbol = "[❯](bold fg:neon_red)"

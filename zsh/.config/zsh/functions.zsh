@@ -37,3 +37,21 @@ digga() {
 removehost() {
   sed -i "" "/^$1/d" ~/.ssh/known_hosts
 }
+
+# Claude Code in a new zellij tab (pass args through)
+cc() {
+  if [[ -n "$ZELLIJ" ]]; then
+    zellij action new-tab --name "claude" -- claude "$@"
+  else
+    claude "$@"
+  fi
+}
+
+# Claude Code in a floating zellij pane
+ccf() {
+  if [[ -n "$ZELLIJ" ]]; then
+    zellij run --name "claude" --floating --close-on-exit -- claude "$@"
+  else
+    claude "$@"
+  fi
+}

@@ -134,6 +134,7 @@ keybinds clear-defaults=true {
         }
     }
     shared_except "locked" {
+        bind "Alt c" { NewTab { layout "claude"; } ; SwitchToMode "normal"; }
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
