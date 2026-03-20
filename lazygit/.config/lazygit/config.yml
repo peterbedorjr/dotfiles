@@ -4,17 +4,17 @@ gui:
   border: rounded
   theme:
     activeBorderColor:
-      - "#04d1f9"  # neon cyan
+      - "#04d1f9" # neon cyan
       - bold
     inactiveBorderColor:
-      - "#987afb"  # neon purple
+      - "#987afb" # neon purple
     searchingActiveBorderColor:
-      - "#37f499"  # neon green
+      - "#37f499" # neon green
       - bold
     optionsTextColor:
       - "#04d1f9"
     selectedLineBgColor:
-      - "#1a1e2e"
+      - "#2a3050"
     cherryPickedCommitFgColor:
       - "#04d1f9"
     cherryPickedCommitBgColor:
@@ -24,10 +24,10 @@ gui:
     markedBaseCommitBgColor:
       - "#987afb"
     unstagedChangesColor:
-      - "#f16c75"  # neon red
+      - "#f16c75" # neon red
     defaultFgColor:
       - "#ffffff"
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never

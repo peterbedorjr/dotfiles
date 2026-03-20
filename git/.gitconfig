@@ -22,8 +22,17 @@
 	side-by-side = true
 	line-numbers = true
 	syntax-theme = Dracula
-	minus-style = "syntax #3a1f2b"
-	plus-style = "syntax #1f3a27"
+	minus-style = "syntax #2a1520"
+	minus-emph-style = "syntax #5c1a2a"
+	plus-style = "syntax #122a1f"
+	plus-emph-style = "syntax #1a5c35"
+	line-numbers-minus-style = "#f16c75"
+	line-numbers-plus-style = "#37f499"
+	line-numbers-zero-style = "#3a3f4b"
+	hunk-header-decoration-style = "#04d1f9 box"
+	hunk-header-style = "file line-number syntax"
+	file-style = "#04d1f9 bold"
+	file-decoration-style = "#987afb ul"
 
 [merge]
 	conflictstyle = zdiff3
@@ -47,3 +56,5 @@
 [pack]
 	windowMemory = 256m
 	packSizeLimit = 256m
+[url "git@github.com:scrybe-to/"]
+	insteadOf = https://github.com/scrybe-to/

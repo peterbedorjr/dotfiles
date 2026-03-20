@@ -1,0 +1,15 @@
+themes {
+    cyberpunk-neon {
+        fg "#ffffff"
+        bg "#0D1116"
+        black "#0D1116"
+        red "#f16c75"
+        green "#37f499"
+        yellow "#9ad900"
+        blue "#04d1f9"
+        magenta "#987afb"
+        cyan "#04d1f9"
+        white "#ffffff"
+        orange "#e58f2a"
+    }
+}

@@ -12,9 +12,14 @@ brew "starship"
 brew "stow"
 brew "zoxide"
 brew "atuin"
+brew "htop"
+brew "btop"
+brew "trash"
 
 # Development
 brew "composer"
+brew "httpie"
+brew "mole"
 brew "nvm"
 brew "php"
 brew "pyenv"
@@ -23,3 +28,6 @@ brew "pyenv"
 brew "gh"
 brew "jq"
 brew "wget"
+
+# Fonts
+cask "font-jetbrains-mono-nerd-font"

@@ -134,7 +134,6 @@ keybinds clear-defaults=true {
         }
     }
     shared_except "locked" {
-        bind "Alt c" { NewTab { layout "claude"; } ; SwitchToMode "normal"; }
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
@@ -283,7 +282,7 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-// theme "dracula"
+theme "cyberpunk-neon"
  
 // Choose the base input mode of zellij.
 // Default: normal

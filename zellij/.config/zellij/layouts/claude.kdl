@@ -1,0 +1,5 @@
+layout {
+    tab name="claude" {
+        pane command="claude" close_on_exit=true
+    }
+}
