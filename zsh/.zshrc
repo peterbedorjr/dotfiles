@@ -13,7 +13,9 @@ plugins=(
 # ── Custom completions ────────────────────────────────────
 fpath=(~/.zfunc $fpath)
 
-source $ZSH/oh-my-zsh.sh
+if [[ -f $ZSH/oh-my-zsh.sh ]]; then
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # ── Emacs mode + macOS-style keybinds ────────────────────
 bindkey -e
@@ -53,7 +55,7 @@ source ~/.config/zsh/project.zsh
 
 # ── fnm (fast Node version manager) ──────────────────────
 eval "$(fnm env)"
-eval "$(fnm completions --shell zsh)"
+command -v fnm &>/dev/null && eval "$(fnm completions --shell zsh)"
 
 # ── Bun ───────────────────────────────────────────────────
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -68,7 +70,7 @@ fi
 
 # ── Tool Inits ────────────────────────────────────────────
 eval "$(zoxide init zsh)"
-eval "$(atuin init zsh)"
+command -v atuin &>/dev/null && eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 
 # ── Syntax Highlighting (must be near end) ────────────────

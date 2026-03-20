@@ -128,6 +128,14 @@ if ! command -v zoxide &>/dev/null; then
   success "zoxide installed"
 fi
 
+# ── Rust ──────────────────────────────────────────────
+if ! command -v rustc &>/dev/null; then
+  step "Installing Rust..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  . "$HOME/.cargo/env"
+  success "Rust installed"
+fi
+
 # ── atuin (shell history) ───────────────────────────────
 if ! command -v atuin &>/dev/null; then
   step "Installing atuin..."

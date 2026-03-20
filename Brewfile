@@ -11,6 +11,7 @@ brew "ripgrep"
 brew "starship"
 brew "stow"
 brew "zoxide"
+brew "atuin"
 
 # Development
 brew "composer"
